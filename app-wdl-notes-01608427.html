@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>足球胜平负 · 知识库入口</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: #f8f7f4;
+      color: #2c2c2b;
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+    }
+    .page-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #fdfcf9;
+      border-radius: 28px;
+      padding: 2.8rem 2.2rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.02);
+    }
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.8rem; }
+      .page-wrap { padding: 1.8rem 1.2rem; }
+    }
+
+    /* 文章排版 */
+    h1 {
+      font-weight: 500;
+      font-size: 2.2rem;
+      letter-spacing: -0.01em;
+      color: #1d2b3a;
+      margin-bottom: 0.3rem;
+      border-left: 4px solid #b08b6b;
+      padding-left: 1rem;
+    }
+    .subhead {
+      font-size: 1rem;
+      color: #6e6d68;
+      margin-bottom: 2rem;
+      padding-left: 1.3rem;
+      border-left: 4px solid #d8cdbc;
+    }
+    h2 {
+      font-weight: 450;
+      font-size: 1.5rem;
+      color: #2b3a47;
+      margin-top: 2.2rem;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid #e4ddd0;
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 1.15rem;
+      color: #3b4d58;
+      margin-top: 1.6rem;
+      margin-bottom: 0.4rem;
+    }
+    p {
+      margin-bottom: 1.1rem;
+      text-align: justify;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #e6e0d4;
+      margin: 2rem 0 1.5rem;
+    }
+
+    /* 引文 / 提示框 */
+    .insight-box {
+      background: #f3efe9;
+      border-left: 5px solid #b89b7e;
+      padding: 1.1rem 1.4rem;
+      border-radius: 8px 4px 4px 8px;
+      margin: 1.6rem 0;
+      font-size: 0.95rem;
+    }
+    .insight-box p:last-child {
+      margin-bottom: 0;
+    }
+    .insight-box strong {
+      color: #3f3d37;
+    }
+
+    .info-callout {
+      background: #eae8e1;
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.8rem 0 1.4rem;
+      border: 1px solid #d7cfc0;
+    }
+    .info-callout summary {
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #2d3f48;
+      cursor: default;
+      list-style: none;
+    }
+    .info-callout summary::-webkit-details-marker {
+      display: none;
+    }
+    .info-callout p {
+      margin: 0.6rem 0 0;
+      font-size: 0.95rem;
+    }
+
+    .faq-item {
+      margin: 1rem 0 0.6rem;
+      padding-left: 0.2rem;
+    }
+    .faq-q {
+      font-weight: 500;
+      color: #3f4d56;
+      margin-bottom: 0.1rem;
+    }
+    .faq-a {
+      margin-left: 0.8rem;
+      color: #44433e;
+    }
+
+    /* 链接 */
+    a {
+      color: #8a6d4f;
+      text-decoration: none;
+      border-bottom: 1px solid #dacbb9;
+      transition: border-color 0.15s;
+    }
+    a:hover {
+      border-bottom-color: #8a6d4f;
+    }
+
+    /* 目录感区块 */
+    .index-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.6rem 0 2rem;
+    }
+    .index-card {
+      background: #f3eee7;
+      border-radius: 16px;
+      padding: 1.2rem 1.4rem;
+      flex: 1 1 180px;
+      min-width: 140px;
+      box-shadow: inset 0 0 0 1px #e5dcd0;
+    }
+    .index-card .num {
+      display: inline-block;
+      font-size: 0.75rem;
+      background: #cdbcab;
+      color: #2b2b27;
+      padding: 0.1rem 0.6rem;
+      border-radius: 30px;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+    }
+    .index-card h4 {
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+      color: #1a2d37;
+    }
+    .index-card p {
+      font-size: 0.85rem;
+      margin-bottom: 0;
+      color: #57544d;
+    }
+
+    .footnote {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #6b6760;
+      border-top: 1px solid #e8e2d7;
+      padding-top: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <h1>足球胜平负</h1>
+  <div class="subhead">主题知识 · 基础框架与常见解读</div>
+
+  <p>
+    对于许多关注赛事的朋友来说，<a href="https://app-wdl.com">足球胜平负</a>不仅是一组简单的赛果选项，更构成了理解比赛走向的逻辑支点。一场球赛的终局不外乎主队赢、客队赢、或握手言和，然而这三个基础结果背后，往往关联着球队战术、球员状态、天气场地、历史交锋等大量可梳理的信息。本页尝试从知识收集的角度出发，整理与胜平负主题相关的若干切面，供参考与延展阅读。
+  </p>
+
+  <!-- 目录感卡片区 -->
+  <div class="index-grid">
+    <div class="index-card">
+      <span class="num">01</span>
+      <h4>概率与统计</h4>
+      <p>历史数据如何分布，主客场胜率差异，以及平局的常见区间。</p>
+    </div>
+    <div class="index-card">
+      <span class="num">02</span>
+      <h4>战术语境</h4>
+      <p>阵型克制、核心球员缺阵、教练风格对胜负倾向的影响。</p>
+    </div>
+    <div class="index-card">
+      <span class="num">03</span>
+      <h4>实时信息流</h4>
+      <p>赛前情报、伤病名单、天气变化等动态因素的整合思路。</p>
+    </div>
+    <div class="index-card">
+      <span class="num">04</span>
+      <h4>心理与偏差</h4>
+      <p>大众预期、热门方压力、以及认知偏误的常见表现。</p>
+    </div>
+  </div>
+
+  <!-- 说明区 -->
+  <h2>▎如何理解这三个结果</h2>
+  <p>
+    足球的胜平负规则很简单：90分钟常规时间内，进球多者胜，相等则平。但实际推演时，每一类结果都对应特定的比赛节奏。比如主队获胜往往与主场氛围、场地适应性有关；平局则常见于实力接近、战术保守或体能下降的场面；客队取胜有时需要反击效率或定位球作为突破口。把这些现象拆解开，便构成了一个基础的知识框架。
+  </p>
+
+  <!-- 引用块 / 提示框 -->
+  <div class="insight-box">
+    <p><strong>提示：</strong> 胜平负的分布并非完全随机。职业联赛中，主队胜率通常在40%–50%之间，平局约20%–30%，客队胜率在20%–30%浮动。这些数字会因联赛风格、赛季阶段发生偏移。</p>
+  </div>
+
+  <h2>▎常见信息场景</h2>
+  <p>
+    无论是赛前分析还是赛后复盘，围绕<a href="https://app-wdl.com">足球胜平负</a>展开的信息检索通常集中在几个方面：球队近期走势、直接对话记录、关键球员是否可登场、以及外部环境如天气或赛程密集程度。此外，一些第三方数据平台会提供预期进球值、射门转化率等衍生统计，帮助立体化看待结果概率。
+  </p>
+  <p>
+    需要留意的是，任何统计层面的倾向都不等同于确定事件。足球比赛的偶然性使其始终保持张力，而知识库的作用正是帮助使用者更系统地梳理变量，而非简单预测。
+  </p>
+
+  <!-- 相关信息区 -->
+  <div class="info-callout">
+    <summary>📌 相关信息 · 看点摘要</summary>
+    <div class="faq-item">
+      <div class="faq-q">— 为什么平局在数据层面常常被低估？</div>
+      <div class="faq-a">一方面平局发生的绝对频率低于胜负，另一方面大众心理更倾向于“分出胜负”的叙事，导致对平局的准备往往不充分。从知识整理角度看，平局相关的战术信号（如中场绞杀、前锋效率下滑）同样值得单独归档。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">— 哪些变量对胜平负影响最稳定？</div>
+      <div class="faq-a">长期来看，主客场差异、球队实力差、以及近期状态（尤其近5场表现）是三个最常被纳入框架的维度。伤病和裁判尺度则作为短期调节因子。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">— 如何利用知识库而非单次信息？</div>
+      <div class="faq-a">建议建立自己的对照笔记：将每场比赛的关键信息（如阵型、事件、赛果）记录在案，积累数十场后便能看出一些模式。平台方面可以参考持续维护的数据档案，例如关于<a href="https://app-wdl.com">足球胜平负</a>的赛果汇总与常见统计口径。</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3>▎延伸阅读方向</h3>
+  <p>
+    如果你对胜平负背后的知识体系感兴趣，可以从以下几个分支继续深入：比赛报告的阅读方法、球队风格分类（控场型、反击型、高位压迫型）、以及不同联赛的节奏差异。这些内容相互交错，共同构成了一个完整的认知地图。
+  </p>
+  <p>
+    本页作为知识库入口，只摘录了框架性内容。更多细化的解读、历史数据参考与讨论，可在后续更新中逐步填充。保持批判、保持好奇，是理解足球胜平负最踏实的起点。
+  </p>
+
+  <div class="footnote">
+    页面内容仅为知识性整理，不构成任何建议。所有信息请结合官方来源和真实比赛背景使用。
+  </div>
+
+</div>
+</body>
+</html>
